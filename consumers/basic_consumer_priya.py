@@ -1,7 +1,7 @@
 """
 basic_consumer_priya.py
 
-Read a log file as it is being written. 
+Consume buzz messages as they are being produced.
 """
 
 #####################################
@@ -10,113 +10,76 @@ Read a log file as it is being written.
 
 # Import packages from Python Standard Library
 import os
-import random
 import time
 
-# Import external packages (must be installed in .venv first)
-from dotenv import load_dotenv
-
 # Import functions from local modules
-from utils.utils_logger import logger
+from utils.utils_logger import logger, get_log_file_path
 
 #####################################
-# Load Environment Variables
+# Define a function to process buzz messages
 #####################################
 
-# Load environment variables from .env
-load_dotenv()
-
-#####################################
-# Define Getter Functions for .env Variables
-#####################################
-
-# Define a function to fetch the message interval from the environment
-def get_message_interval() -> int:
+def process_buzz_message(log_file) -> None:
     """
-    Fetch message interval from environment or use a default value.
+    Read a log file and process each buzz message.
 
-    It doesn't need any outside information, so the parentheses are empty.
-    It returns an integer, so we specify that in the function signature.
-
-    The colon at the end of the function signature is required.
-    All statements inside the function must be consistently indented.
-
-    Define a local variable to hold the value of the environment variable
-    os.getenv() is a function that fetches the value of an environment variable
-    os.getenv() always returns a string 
-    We convert the return value to an integer using the built-in Python int() function
-    To use handy functions like this, import the os module 
-    from the Python Standard Library (see above).
+    Args:
+        log_file (str): The path to the log file to read.
     """
-    return_value: str = os.getenv("MESSAGE_INTERVAL_SECONDS", 3)
-    interval: int = int(return_value)
-    logger.info(f"Messages will be sent every {interval} seconds.")
-    return interval
+    with open(log_file, "r") as file:
+        # Move to the end of the file
+        file.seek(0, os.SEEK_END)
+        print("Consumer is ready and waiting for new buzz messages...")
 
+        # Use a while True loop so the consumer keeps running forever
+        while True:
 
-#####################################
-# Define global variables
-#####################################
+            # Read the next line of the file
+            line = file.readline()
 
-# Define some lists for generating buzz messages
-ADJECTIVES: list = ["amazing", "funny", "boring", "exciting", "weird"]
-ACTIONS: list = ["found", "saw", "tried", "shared", "loved"]
-TOPICS: list = ["a movie", "a meme", "an app", "a trick", "a story"]
+            # If the line is empty, wait for a new log entry
+            if not line:
+                # Wait a second for a new log entry
+                delay_seconds = 1
+                time.sleep(delay_seconds)
+                # Keep checking for new log entries
+                continue
 
-#####################################
-# Define a function to generate buzz messages
-#####################################
+            # We got a new buzz message!
+            # Remove any leading/trailing whitespace and log the message
+            message = line.strip()
+            print(f"Consumed buzz message: {message}")
 
-def generate_messages():
-    """
-    Generate a stream of buzz messages.
-
-    This function uses a generator, which yields one buzz at a time.
-    Generators are memory-efficient because they produce items on the fly
-    rather than creating a full list in memory.
-
-    Because this function uses a while True loop, it will run continuously 
-    until we close the window or hit CTRL c (CMD c on Mac/Linux).
-    """
-    while True:
-        adjective = random.choice(ADJECTIVES)
-        action = random.choice(ACTIONS)
-        topic = random.choice(TOPICS)
-        yield f"Priyanka just {action} {topic}! It was {adjective}."
-
+            # Monitor and alert on special conditions
+            if "Priyanka just loved a story! It was amazing." in message:
+                print(f"ALERT: A special buzz message was found! \n{message}")
+                logger.warning(f"ALERT: A special buzz message was found! \n{message}")
 
 #####################################
-# Define main() function to run this producer.
+# Define main function for this script
 #####################################
 
 def main() -> None:
-    """
-    Main entry point for this producer.
+    """Main entry point."""
 
-    It doesn't need any outside information, so the parentheses are empty.
-    It doesn't return anything, so we say the return type is None.   
-    The colon at the end of the function signature is required.
-    All statements inside the function must be consistently indented. 
-    This is a multiline docstring - a special type of comment 
-    that explains what the function does.
-    """
+    logger.info("START...")
 
-    logger.info("START producer...")
-    logger.info("Hit CTRL c (or CMD c) to close.")
-    
-    # Call the function we defined above to get the message interval
-    # Assign the return value to a variable called interval_secs
-    interval_secs: int = get_message_interval()
+    # Call the function we imported from utils/utils_logger module
+    # to get the path to the log file being generated by the producer.
+    # Assign the return value to a local variable.
+    log_file_path = get_log_file_path()
+    logger.info(f"Reading buzz messages from file located at {log_file_path}.")
 
-    for message in generate_messages():
-        logger.info(message)
-        # Use the time module to pause execution for a specified number of seconds
-        # The time.sleep() function takes a single argument: the number of seconds to pause
-        time.sleep(interval_secs)
+    try:
+        # Try to call the process_buzz_message function with the log file path
+        # as an argument. We know things will go wrong
+        # eventually when the user stops the process, so we use a try block.
+        process_buzz_message(log_file_path)
 
-    logger.info("NOTE: See the `logs` folder to learn more.")
-    logger.info("END producer.....")
+    except KeyboardInterrupt:
+        print("User stopped the buzz consumer.")
 
+    logger.info("END.....")
 
 #####################################
 # Conditional Execution
@@ -124,5 +87,4 @@ def main() -> None:
 
 # If this file is the one being executed, call the main() function
 if __name__ == "__main__":
-    # Call the main function by writing its name followed by parentheses.
     main()
