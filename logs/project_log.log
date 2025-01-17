@@ -358,3 +358,7 @@
 2025-01-17 16:46:34.403 | INFO     | __main__:main:112 - Priyanka just tried a story! It was exciting.
 2025-01-17 16:46:37.405 | INFO     | __main__:main:112 - Priyanka just tried a movie! It was weird.
 2025-01-17 16:46:40.406 | INFO     | __main__:main:112 - Priyanka just tried a movie! It was exciting.
+2025-01-17 16:54:22.391 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-17 16:54:22.392 | INFO     | __main__:main:65 - START...
+2025-01-17 16:54:22.392 | INFO     | __main__:main:71 - Reading buzz messages from file located at logs\project_log.log.
+2025-01-17 16:56:13.955 | INFO     | __main__:main:82 - END.....
