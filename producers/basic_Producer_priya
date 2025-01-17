@@ -1,9 +1,3 @@
-"""
-basic_generator_priya.py
-
-Generate some streaming buzz messages. 
-"""
-
 #####################################
 # Import Modules
 #####################################
@@ -67,7 +61,6 @@ TOPICS: list = ["a movie", "a meme", "an app", "a trick", "a story"]
 # Define a function to generate buzz messages
 #####################################
 
-
 def generate_messages():
     """
     Generate a stream of buzz messages.
@@ -79,16 +72,16 @@ def generate_messages():
     Because this function uses a while True loop, it will run continuously 
     until we close the window or hit CTRL c (CMD c on Mac/Linux).
     """
-  while True:
+    while True:
         adjective = random.choice(ADJECTIVES)
         action = random.choice(ACTIONS)
         topic = random.choice(TOPICS)
-        yield f"I just {action} {topic}! It was {adjective}."
+        yield f"Priyanka just {action} {topic}! It was {adjective}."
+
 
 #####################################
 # Define main() function to run this producer.
 #####################################
-
 
 def main() -> None:
     """
@@ -127,4 +120,3 @@ def main() -> None:
 if __name__ == "__main__":
     # Call the main function by writing its name followed by parentheses.
     main()
-

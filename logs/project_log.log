@@ -282,3 +282,17 @@
 2025-01-15 23:05:27.159 | INFO     | __main__:main:114 - I just saw a movie! It was amazing.
 2025-01-15 23:05:30.161 | INFO     | __main__:main:114 - I just tried a movie! It was amazing.
 2025-01-15 23:05:33.163 | INFO     | __main__:main:114 - I just shared a trick! It was weird.
+2025-01-16 23:24:04.880 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-16 23:24:04.882 | INFO     | __main__:main:106 - START producer...
+2025-01-16 23:24:04.883 | INFO     | __main__:main:107 - Hit CTRL c (or CMD c) to close.
+2025-01-16 23:24:04.884 | INFO     | __main__:get_message_interval:53 - Messages will be sent every 3 seconds.
+2025-01-16 23:24:04.884 | INFO     | __main__:main:114 - I just found a movie! It was exciting.
+2025-01-16 23:24:07.885 | INFO     | __main__:main:114 - I just found an app! It was weird.
+2025-01-16 23:24:10.887 | INFO     | __main__:main:114 - I just loved a movie! It was amazing.
+2025-01-16 23:24:13.889 | INFO     | __main__:main:114 - I just shared a trick! It was boring.
+2025-01-16 23:24:16.891 | INFO     | __main__:main:114 - I just found a movie! It was boring.
+2025-01-16 23:24:19.892 | INFO     | __main__:main:114 - I just saw a meme! It was weird.
+2025-01-16 23:24:22.894 | INFO     | __main__:main:114 - I just loved an app! It was exciting.
+2025-01-16 23:24:25.895 | INFO     | __main__:main:114 - I just found a trick! It was funny.
+2025-01-16 23:24:28.897 | INFO     | __main__:main:114 - I just saw a trick! It was funny.
+2025-01-16 23:24:31.899 | INFO     | __main__:main:114 - I just shared a movie! It was exciting.
