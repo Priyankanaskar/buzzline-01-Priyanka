@@ -79,7 +79,7 @@ def generate_messages():
     Because this function uses a while True loop, it will run continuously 
     until we close the window or hit CTRL c (CMD c on Mac/Linux).
     """
-  while True:
+        while True:
         adjective = random.choice(ADJECTIVES)
         action = random.choice(ACTIONS)
         topic = random.choice(TOPICS)
