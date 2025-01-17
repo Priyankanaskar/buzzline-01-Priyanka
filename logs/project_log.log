@@ -296,3 +296,44 @@
 2025-01-16 23:24:25.895 | INFO     | __main__:main:114 - I just found a trick! It was funny.
 2025-01-16 23:24:28.897 | INFO     | __main__:main:114 - I just saw a trick! It was funny.
 2025-01-16 23:24:31.899 | INFO     | __main__:main:114 - I just shared a movie! It was exciting.
+2025-01-16 23:53:44.825 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-16 23:53:44.827 | INFO     | __main__:main:108 - START producer...
+2025-01-16 23:53:44.827 | INFO     | __main__:main:109 - Hit CTRL c (or CMD c) to close.
+2025-01-16 23:53:44.828 | INFO     | __main__:get_message_interval:55 - Messages will be sent every 3 seconds.
+2025-01-16 23:53:44.829 | INFO     | __main__:main:116 - I just tried a meme! It was exciting.
+2025-01-16 23:53:47.830 | INFO     | __main__:main:116 - I just tried a story! It was funny.
+2025-01-16 23:53:50.832 | INFO     | __main__:main:116 - I just tried a meme! It was weird.
+2025-01-16 23:53:53.833 | INFO     | __main__:main:116 - I just found an app! It was boring.
+2025-01-16 23:53:56.836 | INFO     | __main__:main:116 - I just saw a meme! It was boring.
+2025-01-16 23:53:59.838 | INFO     | __main__:main:116 - I just saw a story! It was exciting.
+2025-01-16 23:54:02.840 | INFO     | __main__:main:116 - I just loved a movie! It was exciting.
+2025-01-16 23:54:05.842 | INFO     | __main__:main:116 - I just loved a story! It was amazing.
+2025-01-16 23:55:55.980 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-16 23:55:55.982 | INFO     | __main__:main:108 - START producer...
+2025-01-16 23:55:55.983 | INFO     | __main__:main:109 - Hit CTRL c (or CMD c) to close.
+2025-01-16 23:55:55.984 | INFO     | __main__:get_message_interval:55 - Messages will be sent every 3 seconds.
+2025-01-16 23:55:55.984 | INFO     | __main__:main:116 - I just found a story! It was funny.
+2025-01-16 23:55:58.985 | INFO     | __main__:main:116 - I just loved a meme! It was amazing.
+2025-01-16 23:56:01.987 | INFO     | __main__:main:116 - I just found a movie! It was funny.
+2025-01-16 23:56:04.989 | INFO     | __main__:main:116 - I just loved a story! It was weird.
+2025-01-16 23:56:07.990 | INFO     | __main__:main:116 - I just loved a meme! It was weird.
+2025-01-16 23:56:10.992 | INFO     | __main__:main:116 - I just shared a story! It was weird.
+2025-01-16 23:56:13.994 | INFO     | __main__:main:116 - I just tried an app! It was funny.
+2025-01-16 23:56:16.995 | INFO     | __main__:main:116 - I just found a movie! It was amazing.
+2025-01-16 23:56:19.997 | INFO     | __main__:main:116 - I just shared a trick! It was funny.
+2025-01-16 23:56:22.999 | INFO     | __main__:main:116 - I just tried a story! It was exciting.
+2025-01-16 23:56:26.000 | INFO     | __main__:main:116 - I just shared a trick! It was boring.
+2025-01-16 23:56:55.035 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-16 23:56:55.038 | INFO     | __main__:main:108 - START producer...
+2025-01-16 23:56:55.038 | INFO     | __main__:main:109 - Hit CTRL c (or CMD c) to close.
+2025-01-16 23:56:55.038 | INFO     | __main__:get_message_interval:55 - Messages will be sent every 3 seconds.
+2025-01-16 23:56:55.039 | INFO     | __main__:main:116 - I just found a series! It was funny.
+2025-01-16 23:56:58.040 | INFO     | __main__:main:116 - I just shared a trick! It was funny.
+2025-01-16 23:57:01.041 | INFO     | __main__:main:116 - I just shared a series! It was exciting.
+2025-01-16 23:57:04.043 | INFO     | __main__:main:116 - I just tried a comedy! It was funny.
+2025-01-16 23:57:07.045 | INFO     | __main__:main:116 - I just tried an app! It was boring.
+2025-01-16 23:57:10.047 | INFO     | __main__:main:116 - I just saw an app! It was weird.
+2025-01-16 23:57:13.049 | INFO     | __main__:main:116 - I just tried a series! It was boring.
+2025-01-16 23:57:16.051 | INFO     | __main__:main:116 - I just shared a story! It was amazing.
+2025-01-16 23:57:19.052 | INFO     | __main__:main:116 - I just tried a comedy! It was weird.
+2025-01-16 23:57:22.054 | INFO     | __main__:main:116 - I just saw a comedy! It was exciting.
