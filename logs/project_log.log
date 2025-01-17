@@ -362,3 +362,19 @@
 2025-01-17 16:54:22.392 | INFO     | __main__:main:65 - START...
 2025-01-17 16:54:22.392 | INFO     | __main__:main:71 - Reading buzz messages from file located at logs\project_log.log.
 2025-01-17 16:56:13.955 | INFO     | __main__:main:82 - END.....
+2025-01-17 16:58:19.459 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-17 16:58:19.460 | INFO     | __main__:main:104 - START producer...
+2025-01-17 16:58:19.460 | INFO     | __main__:main:105 - Hit CTRL c (or CMD c) to close.
+2025-01-17 16:58:19.461 | INFO     | __main__:get_message_interval:53 - Messages will be sent every 3 seconds.
+2025-01-17 16:58:19.461 | INFO     | __main__:main:112 - Priyanka just shared a story! It was boring.
+2025-01-17 16:58:22.463 | INFO     | __main__:main:112 - Priyanka just found a story! It was amazing.
+2025-01-17 16:58:25.464 | INFO     | __main__:main:112 - Priyanka just found a story! It was amazing.
+2025-01-17 16:58:28.465 | INFO     | __main__:main:112 - Priyanka just found a meme! It was boring.
+2025-01-17 16:58:31.467 | INFO     | __main__:main:112 - Priyanka just loved a meme! It was funny.
+2025-01-17 16:58:34.469 | INFO     | __main__:main:112 - Priyanka just saw a trick! It was exciting.
+2025-01-17 16:58:37.471 | INFO     | __main__:main:112 - Priyanka just saw an app! It was weird.
+2025-01-17 16:58:40.472 | INFO     | __main__:main:112 - Priyanka just shared a story! It was weird.
+2025-01-17 16:58:43.474 | INFO     | __main__:main:112 - Priyanka just saw a trick! It was weird.
+2025-01-17 16:58:46.476 | INFO     | __main__:main:112 - Priyanka just shared a movie! It was exciting.
+2025-01-17 16:58:49.476 | INFO     | __main__:main:112 - Priyanka just found a trick! It was exciting.
+2025-01-17 16:58:52.478 | INFO     | __main__:main:112 - Priyanka just loved a story! It was amazing.
